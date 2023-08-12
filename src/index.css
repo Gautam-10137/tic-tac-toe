@@ -33,8 +33,23 @@ code {
 .square:focus{
   outline: none;
 }
+.board-row{
+  
+  width: 205px;
+  margin: auto;
+}
 .board-row:after{
   clear: both;
   content: "";
   display: table;
+}
+
+.board{
+  background-color: aqua;
+}
+.status{
+  
+  width: 200px;
+  margin: auto;
+  padding: 3px;
 }
