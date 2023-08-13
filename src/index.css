@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(21, 17, 17);
 }
 
 code {
@@ -29,6 +30,9 @@ code {
   vertical-align: middle;
   margin-right: -1px;
   margin-left: -1px;
+  border: 2px solid rgb(157, 233, 230);
+  background-color: rgb(14, 11, 11);
+  color: rgb(186, 230, 236);
 }
 .square:focus{
   outline: none;
@@ -45,11 +49,27 @@ code {
 }
 
 .board{
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .status{
-  
+  color: aqua;
   width: 200px;
   margin: auto;
   padding: 3px;
+}
+.name{
+  color: aqua;
+  font-size: 50px;
+}
+.history{
+  color: rgb(162, 239, 239);
+}
+.move{
+  background-color: rgb(189, 236, 244);
+}
+.num{
+  color: aliceblue;
+}
+.restart{
+  /* color: aliceblue; */
 }

@@ -38,6 +38,10 @@ export default class Game extends Component {
           xIsNext:(step%2)?false:true
         })
   }
+   restart(e) {
+  
+     window.location.reload();
+   }
   render() {
     const history=this.state.history;
     const current=history[this.state.stepNum];
@@ -51,7 +55,7 @@ export default class Game extends Component {
         desc='Move to start';
       }
       return <li key={move}>
-             <button onClick={()=>this.jumpTo(move)}>
+             <button  className='move' onClick={()=>this.jumpTo(move)}>
                     {desc}
              </button>
       </li>
@@ -66,15 +70,18 @@ export default class Game extends Component {
     
     return (
       <div className='game'>
+        <div className='name'> Tic-Tac-Toe</div>
          <div className='status'>{status}</div>
         <div className='gameBoard'>  
         <Board
             squares={current.squares}
             onClick={(i)=>this.handleClick(i)}
-        />
+        />       
         </div>
+        <button className='restart' onClick={()=>this.restart()}>Restart</button>
         <div className='game-info'>
-               <ol>{move}</ol>
+          <h1 className='history'>Time Travel</h1>
+               <ol className='num'>{move}</ol>
         </div>
       </div>
     )
